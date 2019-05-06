@@ -19,9 +19,9 @@ class CitiesService {
 			throw new BadRequestResult('PERMISSION_REQUIRED', 'You have no permission to access the city with the specified ID!');
 		}
 
-		const defaultCountry = 'Hungary';
+		// const defaultCountry = 'Hungary';
 
-		const city = this._repo.get(defaultCountry, id);
+		const city = this._repo.get(id);
 		debug(city);
 
 		return city;
